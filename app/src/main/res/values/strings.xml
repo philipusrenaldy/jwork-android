@@ -7,4 +7,17 @@
     <string name="name">Name</string>
     <string name="register">REGISTER</string>
     <string name="hello_world">Hello World</string>
+    <string name="apply_job">Apply Job</string>
+    <string name="job_name">Job Name</string>
+    <string name="textview">TextView</string>
+    <string name="job_category">Job Category</string>
+    <string name="job_fee">Job Fee</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="e_wallet">E-Wallet</string>
+    <string name="bank">Bank</string>
+    <string name="referral_code">Referral Code</string>
+    <string name="ref_code">Ref Code</string>
+    <string name="total_fee">Total Fee</string>
+    <string name="count">COUNT</string>
+    <string name="apply_now">APPLY NOW</string>
 </resources>

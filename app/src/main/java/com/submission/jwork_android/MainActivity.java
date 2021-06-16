@@ -2,14 +2,19 @@ package com.submission.jwork_android;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
-import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.submission.jwork_android.constructor.Job;
+import com.submission.jwork_android.constructor.Location;
+import com.submission.jwork_android.constructor.Recruiter;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -26,14 +31,38 @@ public class MainActivity extends AppCompatActivity {
 
     ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
-
+    private static int jobSeekerId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            jobSeekerId = extras.getInt("jobseekerid");
+        }
+
         expListView = (ExpandableListView) findViewById(R.id.lvExp);
         refreshList();
+
+        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                Intent intent = new Intent(MainActivity.this, ApplyJobActivity.class);
+                int jobId = childMapping.get(listRecruiter.get(groupPosition)).get(childPosition).getId();
+                String jobName = childMapping.get(listRecruiter.get(groupPosition)).get(childPosition).getName();
+                String jobCategory = childMapping.get(listRecruiter.get(groupPosition)).get(childPosition).getCategory();
+                int jobFee = childMapping.get(listRecruiter.get(groupPosition)).get(childPosition).getFee();
+
+                intent.putExtra("job_id", jobId);
+                intent.putExtra("job_name", jobName);
+                intent.putExtra("job_category", jobCategory);
+                intent.putExtra("job_fee", jobFee);
+                intent.putExtra("jobseekerId", jobSeekerId);
+                startActivity(intent);
+                return true;
+            }
+        });
     }
 
     protected void refreshList() {
@@ -98,5 +127,14 @@ public class MainActivity extends AppCompatActivity {
         MenuRequest menuRequest = new MenuRequest(responseListener);
         RequestQueue queue = Volley.newRequestQueue(MainActivity.this);
         queue.add(menuRequest);
+        Button btnAppliedJob = findViewById(R.id.btnAppliedJob);
+        btnAppliedJob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SelesaiJobActivity.class);
+                intent.putExtra("jobseekerid", jobSeekerId);
+                startActivity(intent);
+            }
+        });
     }
 }

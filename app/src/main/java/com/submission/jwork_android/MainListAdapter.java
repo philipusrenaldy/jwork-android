@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
+import com.submission.jwork_android.constructor.Job;
+import com.submission.jwork_android.constructor.Recruiter;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 

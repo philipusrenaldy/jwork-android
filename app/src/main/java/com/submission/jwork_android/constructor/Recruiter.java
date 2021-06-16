@@ -1,4 +1,4 @@
-package com.submission.jwork_android;
+package com.submission.jwork_android.constructor;
 
 public class Recruiter {
     private int id;
