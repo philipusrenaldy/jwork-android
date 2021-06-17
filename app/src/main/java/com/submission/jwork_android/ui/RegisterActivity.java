@@ -1,17 +1,18 @@
-package com.submission.jwork_android;
+package com.submission.jwork_android.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.submission.jwork_android.R;
+import com.submission.jwork_android.request.RegisterRequest;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -38,6 +39,8 @@ public class RegisterActivity extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject(response);
                     if (jsonObject != null) {
                         Toast.makeText(RegisterActivity.this, "Register Successful", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                        startActivity(intent);
                     }
                 } catch (JSONException e) {
                     Toast.makeText(RegisterActivity.this, "Register Failed", Toast.LENGTH_SHORT).show();

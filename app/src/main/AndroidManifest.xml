@@ -14,17 +14,18 @@
         android:theme="@style/Theme.Jworkandroid"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".SelesaiJobActivity"></activity>
-        <activity android:name=".ApplyJobActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".ui.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.SelesaiJobActivity" />
+        <activity android:name=".ui.ApplyJobActivity" />
+        <activity android:name=".ui.MainActivity" />
+        <activity android:name=".ui.RegisterActivity" />
+        <activity android:name=".ui.LoginActivity" />
     </application>
 
 </manifest>

@@ -3,52 +3,76 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#29ABE2"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".ui.LoginActivity">
 
-    <EditText
-        android:id="@+id/et_loginEmail"
-        android:layout_width="350dp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="265dp"
-        android:autofillHints="Email"
-        android:hint="@string/email"
+        android:elevation="100dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:inputType="textEmailAddress" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/et_loginPassword"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_loginEmail"
-        android:autofillHints="Email"
-        android:inputType="textPassword" />
-    <Button
-        android:id="@+id/btn_register"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_loginPassword"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="@color/black"
-        android:text="@string/login"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
 
-    <TextView
-        android:id="@+id/tv_register"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:text="@string/register_now"
-        android:textColor="@color/blue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_register"
-        android:textAlignment="center"/>
+            <EditText
+                android:id="@+id/et_loginEmail"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:autofillHints="Email"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
+            <EditText
+                android:id="@+id/et_loginPassword"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:autofillHints="Email"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_loginEmail" />
 
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="#29ABE2"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/login"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_loginPassword" />
+
+            <TextView
+                android:id="@+id/tv_register"
+                android:layout_width="350dp"
+                android:layout_marginTop="3dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/register_now"
+                android:textAlignment="center"
+                android:textColor="@color/blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintTop_toBottomOf="@id/btn_register" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

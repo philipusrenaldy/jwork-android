@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SelesaiJobActivity">
+    android:background="#29ABE2"
+    tools:context=".ui.SelesaiJobActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -314,7 +315,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:backgroundTint="#808080"
+                android:backgroundTint="#29ABE2"
                 android:fontFamily="@font/poppins_medium"
                 android:text="@android:string/cancel"
                 android:textColor="@color/black"
@@ -331,7 +332,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:backgroundTint="#808080"
+                android:backgroundTint="#29ABE2"
                 android:fontFamily="@font/poppins_medium"
                 android:text="Finish"
                 android:textColor="@color/black"

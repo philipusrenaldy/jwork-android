@@ -1,4 +1,4 @@
-package com.submission.jwork_android;
+package com.submission.jwork_android.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
+import com.submission.jwork_android.R;
 import com.submission.jwork_android.constructor.Job;
 import com.submission.jwork_android.constructor.Recruiter;
 

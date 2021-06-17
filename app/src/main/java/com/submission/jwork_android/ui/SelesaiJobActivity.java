@@ -1,4 +1,4 @@
-package com.submission.jwork_android;
+package com.submission.jwork_android.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,10 @@ import android.widget.Toast;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.submission.jwork_android.R;
+import com.submission.jwork_android.request.JobBatalRequest;
+import com.submission.jwork_android.request.JobFetchRequest;
+import com.submission.jwork_android.request.JobSelesaiRequest;
 
 import org.json.JSONArray;
 import org.json.JSONException;

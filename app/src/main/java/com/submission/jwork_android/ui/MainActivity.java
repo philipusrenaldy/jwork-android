@@ -1,4 +1,4 @@
-package com.submission.jwork_android;
+package com.submission.jwork_android.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,9 +12,12 @@ import android.widget.ExpandableListView;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.submission.jwork_android.adapter.MainListAdapter;
+import com.submission.jwork_android.R;
 import com.submission.jwork_android.constructor.Job;
 import com.submission.jwork_android.constructor.Location;
 import com.submission.jwork_android.constructor.Recruiter;
+import com.submission.jwork_android.request.MenuRequest;
 
 import org.json.JSONArray;
 import org.json.JSONException;

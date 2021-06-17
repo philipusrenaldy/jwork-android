@@ -1,9 +1,8 @@
-package com.submission.jwork_android;
+package com.submission.jwork_android.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,8 +13,10 @@ import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.Volley;
+import com.submission.jwork_android.R;
+import com.submission.jwork_android.request.ApplyJobRequest;
+import com.submission.jwork_android.request.BonusRequest;
 
 import org.json.JSONException;
 import org.json.JSONObject;
