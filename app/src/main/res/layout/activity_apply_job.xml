@@ -215,14 +215,14 @@
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:backgroundTint="#29ABE2"
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/apply_now"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/staticTotalFee"
+                app:layout_constraintTop_toBottomOf="@id/btnCount"
                 tools:layout_editor_absoluteY="246dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

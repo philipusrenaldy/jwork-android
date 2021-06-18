@@ -11,8 +11,8 @@ public class BonusRequest extends StringRequest {
     private Map<String,String> params;
     private static final String URL = "http://10.0.2.2:8080/bonus/";
 
-    public BonusRequest(String promoCode, Response.Listener<String> listener) {
-        super(Method.GET, URL + promoCode, listener, null);
+    public BonusRequest(String referralCode, Response.Listener<String> listener) {
+        super(Method.GET, URL + referralCode, listener, null);
         params = new HashMap<>();
     }
 

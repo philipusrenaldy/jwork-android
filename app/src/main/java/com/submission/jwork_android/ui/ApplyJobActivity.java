@@ -27,9 +27,7 @@ public class ApplyJobActivity extends AppCompatActivity {
     private String jobName;
     private String jobCategory;
     private double jobFee;
-
-    ApplyJobRequest request;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,6 +92,8 @@ public class ApplyJobActivity extends AppCompatActivity {
                                 if (refCode.isEmpty()) {
                                     Toast.makeText(ApplyJobActivity.this, "No referral code applied!", Toast.LENGTH_SHORT).show();
                                     tvTotalFee.setText("Rp. " + jobFee);
+                                    btnCount.setVisibility(View.VISIBLE);
+                                    btnApply.setVisibility(View.VISIBLE);
                                 } else {
                                     try {
                                         JSONObject jsonResponse = new JSONObject(response);
